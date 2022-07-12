@@ -19,6 +19,8 @@ body{
 
 }
 h1{
+  -webkit-animation: fadein 30s;
+  animation: fadein 30s;
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -110,6 +112,14 @@ a span:before {
   position:absolute;
   bottom:-5px;
   left:40px;
+}
+
+#player {
+  width: 40%;
+	height: 200%;
+  position: absolute;
+  top: -500%;
+  left: 0px;
 }
 
 /* text pops up when icon is in hover state */
