@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "deploy": "gh-pages -d assets",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -11,6 +12,7 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "gsap": "^3.10.4",
     "three": "^0.142.0",
     "three-sky": "^1.1.3"
