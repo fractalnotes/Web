@@ -1,6 +1,6 @@
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import {Vector3} from 'three';
-import gsap from 'gsap'
+import gsap from './../../../gsap-core.js'
 function createControls(camera, canvas) {
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true; //for smoother movement
