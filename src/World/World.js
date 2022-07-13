@@ -6,7 +6,7 @@ import { createControls } from './systems/controls.js';
 import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/Resizer.js';
 import { Loop } from './systems/Loop.js';
-import * as THREE from 'three'
+import * as THREE from "../node_modules/three/build/three.module.js";
 
 
 let camera;
