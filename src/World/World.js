@@ -36,6 +36,7 @@ class World {
   
 
   async init() {
+    
     function addStar() {
       const geometry = new THREE.SphereGeometry(0.25, 24, 24);
       const material = new THREE.MeshStandardMaterial({
@@ -67,6 +68,8 @@ class World {
     loop.updatables.push(fire);
     scene.add(fire,violin);
     
+
+
   }
  
 
