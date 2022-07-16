@@ -36,6 +36,15 @@ class World {
   
 
   async init() {
+
+    const loadingManager = new THREE.LoadingManager( () => {
+	
+      const loadingScreen = document.getElementById( 'loading-screen' );
+      loadingScreen.classList.add( 'fade-out' );
+      
+      // optional: remove loader from DOM via event listener
+      loadingScreen.addEventListener( 'transitionend', onTransitionEnd );
+    } );
     
     function addStar() {
       const geometry = new THREE.SphereGeometry(0.25, 24, 24);
@@ -79,13 +88,25 @@ class World {
 
   start() {
     loop.start();
+    const loadingScreen = document.getElementById( 'loading-screen' );
+    loadingScreen.remove()
+    gsap.to(camera.position, { duration: 10, ease: "power1.inOut",
+            x: 0,
+            y: 20.2,
+            z: 0})
+            gsap.to(controls.target, { duration: 10, ease: "power1.inOut",
+            x: 0.15,
+            y: 5,
+            z: 0})
   }
 
   stop() {
     loop.stop();
+    
   }
   
 }
+
 
 
 export { World };

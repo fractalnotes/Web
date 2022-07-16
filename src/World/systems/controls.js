@@ -38,14 +38,7 @@ function createControls(camera, canvas) {
 
     // sometime later:
     controls.tick = () => controls.update();
-    gsap.to(camera.position, { duration: 10, ease: "power1.inOut",
-            x: 0,
-            y: 20.2,
-            z: 0})
-            gsap.to(controls.target, { duration: 10, ease: "power1.inOut",
-            x: 0.15,
-            y: 5,
-            z: 0})
+    
     return controls;
     
     }
